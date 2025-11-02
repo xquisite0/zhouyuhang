@@ -4,9 +4,9 @@ import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import ProjectCard from "@/components/ProjectCard";
 import ExperienceItem from "@/components/ExperienceItem";
+import EducationItem from "@/components/EducationItem";
 import SkillTag from "@/components/SkillTag";
-import ContactForm from "@/components/ContactForm";
-import { projects, experience, skills } from "@/libs/data";
+import { projects, experience, education, skills, site } from "@/libs/data";
 
 export default function Home() {
   return (
@@ -53,8 +53,26 @@ export default function Home() {
           </div>
         </Section>
 
+        <Section id="education" title="Education">
+          <div className="grid gap-4">
+            {education.map((item, idx) => (
+              <EducationItem key={idx} item={item} />
+            ))}
+          </div>
+        </Section>
+
         <Section id="contact" title="Contact">
-          <ContactForm />
+          <div className="max-w-3xl">
+            <p className="text-gray-700 dark:text-gray-300 mb-6">
+              I'm currently seeking Summer 2026 SWE internship opportunities. Feel free to reach out!
+            </p>
+            <a
+              href={`mailto:${site.email}`}
+              className="btn btn-primary"
+            >
+              Email Me
+            </a>
+          </div>
         </Section>
       </main>
       <Footer />
