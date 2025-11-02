@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { site } from "../libs/data";
 import { usePathname } from "next/navigation";
+import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
   { href: "#about", label: "About" },
@@ -35,6 +36,7 @@ export default function Navbar() {
           >
             Resume
           </a>
+          <ThemeToggle />
         </nav>
       </div>
     </header>
