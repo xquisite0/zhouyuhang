@@ -99,7 +99,7 @@ export default function Home() {
               2026 SWE internship opportunities. Feel free to reach out!
             </p>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
-              Available: {site.availability}
+              Internship Availability: {site.availability}
             </p>
             <div className="flex gap-3 flex-wrap">
               <a
