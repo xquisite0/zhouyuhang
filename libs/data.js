@@ -3,7 +3,7 @@
 export const site = {
   name: "Zhou Yuhang",
   role: "Software Engineer",
-  tagline: "Seeking Summer 2026 SWE Internship",
+  tagline: "Open to Freelance Work & Summer 2026 SWE Internship",
   location: "Singapore",
   email: "zyuhang255@gmail.com",
   github: "https://github.com/xquisite0",

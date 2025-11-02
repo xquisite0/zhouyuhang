@@ -31,8 +31,9 @@ export default function Home() {
             </p>
             <p className="text-gray-700 dark:text-gray-300">
               Pursuing my Bachelor of Computing at NUS as a Merit Scholar,
-              I&apos;m seeking Summer 2026 SWE internship opportunities where I can
-              contribute to impactful projects and continue growing as an engineer.
+              I&apos;m open to web development freelance work and seeking Summer 2026
+              SWE internship opportunities where I can contribute to impactful
+              projects and continue growing as an engineer.
             </p>
           </div>
         </Section>
@@ -94,7 +95,8 @@ export default function Home() {
         <Section id="contact" title="Contact">
           <div className="max-w-3xl">
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              I&apos;m currently seeking Summer 2026 SWE internship opportunities. Feel free to reach out!
+              I&apos;m currently open to web development freelance work and seeking Summer
+              2026 SWE internship opportunities. Feel free to reach out!
             </p>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
               Available: {site.availability}

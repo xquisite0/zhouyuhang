@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Zhou Yuhang — Software Engineer",
-  description: "Portfolio of Zhou Yuhang. Seeking Summer 2026 SWE internship.",
+  description: "Portfolio of Zhou Yuhang. Open to freelance work and seeking Summer 2026 SWE internship.",
   metadataBase: new URL("https://example.com"), // Update this to your actual domain when deploying
   openGraph: {
     title: "Zhou Yuhang — Software Engineer",

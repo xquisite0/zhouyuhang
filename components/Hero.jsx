@@ -25,8 +25,8 @@ export default function Hero() {
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
               I build reliable, user-friendly software with modern web
-              technologies. I am currently looking for a Summer 2026 SWE
-              internship.
+              technologies. I am currently open to web development freelance work
+              and looking for a Summer 2026 SWE internship.
             </p>
             <div className="flex items-center gap-3 flex-wrap">
               <a
