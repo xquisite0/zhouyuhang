@@ -28,8 +28,14 @@ export default function Hero() {
               technologies. I am currently looking for a Summer 2026 SWE
               internship.
             </p>
-            <div className="flex items-center gap-3">
-              <a href="#projects" className="btn btn-primary">View Projects</a>
+            <div className="flex items-center gap-3 flex-wrap">
+              <a
+                href={`mailto:${site.email}`}
+                className="btn btn-primary"
+              >
+                Get in Touch
+              </a>
+              <a href="#projects" className="btn btn-outline">View Projects</a>
               <a
                 href={site.resumePath}
                 className="btn btn-outline"
