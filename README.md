@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Zhou Yuhang — Portfolio
+
+This is a personal portfolio website built with Next.js 15 (App Router), Tailwind CSS v4, and DaisyUI.
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies and run the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Edit content in `libs/data.js` (name, links, skills, projects, experience). The homepage uses sections for About, Projects, Experience, Skills, and Contact.
+
+To update the resume link, place your PDF at `public/resume.pdf`. The Navbar and Hero buttons will automatically point to it.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- Modern Next.js App Router structure
+- Tailwind CSS v4 + DaisyUI components
+- Reusable components (Navbar, Hero, Section, ProjectCard, ExperienceItem, SkillTag, ContactForm)
+- Contact form posting to `/api/contact` (logs to server by default)
+- Basic SEO: `metadata`, `robots.js`, and `sitemap.js`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+You can deploy this on Vercel or any Node.js host.
 
-## Deploy on Vercel
+Optional environment variable to configure absolute URLs in `robots` and `sitemap`:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+export NEXT_PUBLIC_SITE_URL="https://your-domain.com"
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Then build and start:
+
+```bash
+npm run build
+npm start
+```
