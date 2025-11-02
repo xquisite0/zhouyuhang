@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { site } from "@/libs/data";
+import { site } from "../libs/data";
 import { usePathname } from "next/navigation";
 
 const navItems = [
@@ -9,6 +9,7 @@ const navItems = [
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
   { href: "#skills", label: "Skills" },
+  { href: "#achievements", label: "Achievements" },
   { href: "#contact", label: "Contact" },
 ];
 

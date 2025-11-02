@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site } from "@/libs/data";
+import { site } from "../libs/data";
 
 export default function Footer() {
   return (
@@ -17,6 +17,11 @@ export default function Footer() {
           {site.linkedin && (
             <Link href={site.linkedin} className="hover:opacity-70" target="_blank">
               LinkedIn
+            </Link>
+          )}
+          {site.leetcode && (
+            <Link href={site.leetcode} className="hover:opacity-70" target="_blank">
+              LeetCode
             </Link>
           )}
           <Link href="/" className="hover:opacity-70">

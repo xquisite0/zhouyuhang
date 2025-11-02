@@ -1,12 +1,13 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import Section from "@/components/Section";
-import ProjectCard from "@/components/ProjectCard";
-import ExperienceItem from "@/components/ExperienceItem";
-import EducationItem from "@/components/EducationItem";
-import SkillTag from "@/components/SkillTag";
-import { projects, experience, education, skills, site } from "@/libs/data";
+import Navbar from "../components/Navbar.jsx";
+import Footer from "../components/Footer.jsx";
+import Hero from "../components/Hero.jsx";
+import Section from "../components/Section.jsx";
+import ProjectCard from "../components/ProjectCard.jsx";
+import ExperienceItem from "../components/ExperienceItem.jsx";
+import EducationItem from "../components/EducationItem.jsx";
+import AchievementItem from "../components/AchievementItem.jsx";
+import SkillCategory from "../components/SkillCategory.jsx";
+import { projects, experience, education, achievements, skillCategories, site } from "../libs/data.js";
 
 export default function Home() {
   return (
@@ -16,16 +17,33 @@ export default function Home() {
         <Hero />
 
         <Section id="about" title="About">
-          <p className="text-gray-700 dark:text-gray-300 max-w-3xl">
-            I am a software engineer who enjoys building delightful and
-            performant web apps. I love learning new technologies and solving
-            real problems with simple, thoughtful design.
-          </p>
+          <div className="max-w-3xl space-y-4">
+            <p className="text-gray-700 dark:text-gray-300">
+              I am a software engineer who enjoys building delightful and
+              performant web apps. I love learning new technologies and solving
+              real problems with simple, thoughtful design.
+            </p>
+            <p className="text-gray-700 dark:text-gray-300">
+              With a strong foundation in competitive programming (Top 0.5% on LeetCode)
+              and experience across the full stack, from building Redis in C++ to
+              developing AI-powered web applications, I bring both systems-level
+              understanding and modern web development expertise.
+            </p>
+            <p className="text-gray-700 dark:text-gray-300">
+              Pursuing my Bachelor of Computing at NUS as a Merit Scholar,
+              I&apos;m seeking Summer 2026 SWE internship opportunities where I can
+              contribute to impactful projects and continue growing as an engineer.
+            </p>
+          </div>
         </Section>
 
-        <Section id="projects" title="Projects" subtitle="Selected work">
+        <Section id="projects" title="Featured Project">
+          <ProjectCard project={projects[0]} />
+        </Section>
+
+        <Section title="Other Projects">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {projects.map((p) => (
+            {projects.slice(1).map((p) => (
               <ProjectCard key={p.title} project={p} />
             ))}
           </div>
@@ -46,9 +64,21 @@ export default function Home() {
         </Section>
 
         <Section id="skills" title="Skills">
-          <div className="flex flex-wrap gap-2">
-            {skills.map((s) => (
-              <SkillTag key={s} label={s} />
+          <div className="space-y-6">
+            {skillCategories.map((cat) => (
+              <SkillCategory
+                key={cat.category}
+                category={cat.category}
+                skills={cat.skills}
+              />
+            ))}
+          </div>
+        </Section>
+
+        <Section id="achievements" title="Achievements & Awards">
+          <div className="grid gap-4">
+            {achievements.map((achievement, idx) => (
+              <AchievementItem key={idx} achievement={achievement} />
             ))}
           </div>
         </Section>
@@ -63,15 +93,36 @@ export default function Home() {
 
         <Section id="contact" title="Contact">
           <div className="max-w-3xl">
-            <p className="text-gray-700 dark:text-gray-300 mb-6">
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
               I&apos;m currently seeking Summer 2026 SWE internship opportunities. Feel free to reach out!
             </p>
-            <a
-              href={`mailto:${site.email}`}
-              className="btn btn-primary"
-            >
-              Email Me
-            </a>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
+              Available: {site.availability}
+            </p>
+            <div className="flex gap-3 flex-wrap">
+              <a
+                href={`mailto:${site.email}`}
+                className="btn btn-primary"
+              >
+                Email Me
+              </a>
+              <a
+                href={site.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline"
+              >
+                LinkedIn
+              </a>
+              <a
+                href={site.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline"
+              >
+                GitHub
+              </a>
+            </div>
           </div>
         </Section>
       </main>

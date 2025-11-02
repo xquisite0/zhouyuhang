@@ -1,4 +1,4 @@
-import { site } from "@/libs/data";
+import { site } from "../libs/data";
 import Image from "next/image";
 
 export default function Hero() {

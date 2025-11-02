@@ -1,10 +1,23 @@
+import Image from "next/image";
+
 export default function EducationItem({ item }) {
   return (
     <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-5">
       <div className="flex items-start justify-between gap-4">
-        <div>
-          <h3 className="text-lg font-semibold">{item.school}</h3>
-          <p className="text-sm text-gray-500">{item.degree}</p>
+        <div className="flex items-center gap-3 flex-1">
+          {item.logo && (
+            <Image
+              src={item.logo}
+              alt={`${item.school} logo`}
+              width={48}
+              height={48}
+              className="rounded flex-shrink-0"
+            />
+          )}
+          <div>
+            <h3 className="text-lg font-semibold">{item.school}</h3>
+            <p className="text-sm text-gray-500">{item.degree}</p>
+          </div>
         </div>
         <p className="text-sm text-gray-500 whitespace-nowrap">
           {item.start} – {item.end}
