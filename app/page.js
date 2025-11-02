@@ -64,7 +64,7 @@ export default function Home() {
         <Section id="contact" title="Contact">
           <div className="max-w-3xl">
             <p className="text-gray-700 dark:text-gray-300 mb-6">
-              I'm currently seeking Summer 2026 SWE internship opportunities. Feel free to reach out!
+              I&apos;m currently seeking Summer 2026 SWE internship opportunities. Feel free to reach out!
             </p>
             <a
               href={`mailto:${site.email}`}
